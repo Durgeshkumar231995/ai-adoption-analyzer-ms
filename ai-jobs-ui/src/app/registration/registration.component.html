@@ -1,0 +1,114 @@
+
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+      <div>
+          <h1 style="text-align: center;">AI Jobs</h1>
+      </div>
+      <div class="row d-flex align-items-center justify-content-center h-100">
+
+          <div class="col-md-8 col-lg-7 col-xl-6">
+            <div class="card">
+                <div class="card-body py-5 px-md-5" id="aijobs">
+              <img src="assets/aijobs.jpg" class="img-fluid" alt="ai image">
+          </div>
+          </div>
+        </div>
+
+
+
+
+          <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="card">
+                  <div class="card-body py-5 px-md-5">
+                      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                          <!-- 2 column grid layout with text inputs for the first and last names -->
+                     
+                              <div class="col px-1 mb-2">
+                                  <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                      <span class="h6 small bg-white text-muted px-1">firstName</span>
+                                  </label>
+                                  <input type="text" formControlName="firstName" class="form-control mt-2" id="firstName"
+                                  [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }">
+                              </div>
+
+                              <div class="col px-1 mb-2">
+                                <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                    <span class="h6 small bg-white text-muted px-1">lastName</span>
+                                </label>
+                                <input type="text" formControlName="lastName" class="form-control mt-2" id="lastName"
+                                [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }">
+                            </div>
+
+                            <div class="col px-1 mb-2">
+                                <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                    <span class="h6 small bg-white text-muted px-1">Username</span>
+                                </label>
+                                <input type="text" formControlName="username" class="form-control mt-2" id="username"
+                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+                            </div>
+
+                              <div class="col px-1 mb-2">
+                                  <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                      <span class="h6 small bg-white text-muted px-1">Password</span>
+                                  </label>
+                                  <input type="password" formControlName="password" class="form-control mt-2" id="pasword" autocomplete="off"
+                                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                              </div>
+                       
+                      
+                              <div class="col px-1 mb-2">
+                                  <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                      <span class="h6 small bg-white text-muted px-1">Email</span>
+                                  </label>
+                                  <input type="text" formControlName="email" class="form-control mt-2" id="email"
+                                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                              </div>
+                              <div class="col px-1 mb-2">
+                                  <label for="input2" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                      <span class="h6 small bg-white text-muted px-1">MobileNumber</span>
+                                  </label>
+                                  <input type="text" formControlName="mobileNumber" class="form-control mt-2" id="mobileNumber"
+                                  [ngClass]="{ 'is-invalid': submitted && f.mobileNumber.errors }">
+                              </div>
+                        
+                        
+                              <div class="col px-1 mb-2">
+                                  <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                      <span class="h6 small bg-white text-muted px-1">Country</span>
+                                  </label>
+                                  <input type="text" formControlName="country" class="form-control mt-2" id="country" 
+                                   [ngClass]="{ 'is-invalid': submitted && f.country.errors }">
+                              </div>
+                              
+                              <div class="col px-1 mb-2">
+                                <label for="input1" class="ms-2 position-absolute" style="margin-top: -0.25rem !important">
+                                    <span class="h6 small bg-white text-muted px-1">DateOfBirth</span>
+                                </label>
+                                <input type="text" formControlName="dateOfBirth" class="form-control mt-2" id="dateOfBirth" 
+                                 [ngClass]="{ 'is-invalid': submitted && f.dateOfBirth.errors }">
+                            </div>
+                        
+
+                          <!-- Submit button -->
+                          <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                          class="nav-link btn btn-success btn-block mb-4 custom-login-btn">
+                      Sign up
+                  </button>
+
+                  <button class="nav-link btn btn-dark btn-block mb-4 custom-login-btn" 
+                  data-mdb-button-init 
+                  data-mdb-ripple-init 
+                  routerLink="/login">
+              Login
+            </button>
+
+                      </form>
+                 
+                  </div>
+              </div>
+          </div>
+      </div>
+     
+  </div>
+</section>

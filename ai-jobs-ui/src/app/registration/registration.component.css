@@ -1,0 +1,9 @@
+.error {
+    color: red;
+    font-size: 0.8em;
+  }
+
+  .custom-login-btn {
+    padding: 12px 20px;
+    font-size: 1.20rem; 
+}

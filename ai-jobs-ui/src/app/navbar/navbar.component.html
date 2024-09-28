@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Welcome AI Jobs</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+         
+          <!-- <button class="nav-link" routerLink="" (click)="logout()">LogOut</button> -->
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <span style="font-size: small;">{{user}}</span>
+      </span>
+      <ng-container *ngIf="isLoggedIn; else loginButton">
+        <button class="btn btn-danger" (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-template #loginButton>
+        <!-- <button class="btn btn-primary" (click)="login()">Login</button> -->
+        <button class="nav-link" class="btn btn-primary" routerLink="login" >Login</button>
+      </ng-template>
+    </div>
+  </div>
+</nav>
+
+
+
